@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    color: hsl(192, 100%, 97%);
+    line-height: 1.6; /*1.3*/
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+
+    background-image: linear-gradient(
+            115deg,
+            hsl(192, 100%, 13%, 0.8),
+            hsl(192, 100%, 21%, 0.7)
+        ),
+        url('annie-spratt-QckxruozjRg-unsplash-1920-1280.jpg');
+    filter: blur(5px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Form and header */
+#survey-form,
+.survey-form-header {
+    width: 100%;
+    border-radius: 5px;
+}
+
+#survey-form {
+    background-color: hsla(192, 59%, 10%, 0.75);
+}
+
+.survey-form-header {
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px black;
+}
+
+#description {
+    text-align: center;
+}
+
+/* Typical form row settings */
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.form-row input[type='text'],
+.form-row input[type='email'],
+.form-row input[type='number'] {
+    border-radius: 5px;
+    border: 1px solid hsl(192, 100%, 21%);
+    width: 100%;
+    padding: 7px;
+    font-size: 16px;
+    background-color: hsl(192, 100%, 97%);
+}
+
+.form-row-header {
+    margin-bottom: 0.25em;
+}
+
+/* Dropdown */
+select {
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: hsl(192, 100%, 97%);
+    width: 100%;
+    padding: 7px;
+}
+
+/* Radio Buttons */
+.fieldset-form-row {
+    border: none;
+    display: flex;
+}
+
+.fieldset-form-row label {
+    display: flex;
+    align-items: center;
+}
+
+.fieldset-form-row input[type='radio'] {
+    margin: -2px 0 0 0;
+}
+
+.fieldset-form-row label span {
+    margin-left: 5px;
+}
+
+/* Checkboxes */
+.checkbox-directions {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* Textarea */
+.form-row textarea {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    border: 1px solid hsl(192, 100%, 21%);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 7px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+/* Submit Button */
+.form-row button {
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 3px;
+    border: none;
+
+    color: #ffffff;
+    background-color: hsl(192, 80%, 50%);
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+/* SUBMIT BUTTON */
+form-row button {
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #ffffff;
+    background-color: #5995da;
+
+    border: none;
+    border-radius: 3px;
+
+    padding: 10px 40px;
+    cursor: pointer;
+}
+
+.form-row button:hover {
+    background-color: hsl(192, 80%, 75%);
+}
+
+.form-row button:active {
+    background-color: hsl(192, 80%, 40%);
+}
+
+/* Background Photo Credit */
+.photo-credit {
+    color: hsl(192, 50%, 50%);
+    margin-top: 40px;
+    font-size: 0.8em;
+}
+
+a {
+    color: hsl(240, 70%, 50%);
+}
+
+a:visited {
+    color: hsl(270, 50%, 50%);
+}
+
+/* Desktop Layouts */
+@media only screen and (min-width: 565px) {
+    #survey-form,
+    .survey-form-header {
+        width: 550px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    #survey-form,
+    .survey-form-header {
+        width: 720px;
+    }
+}

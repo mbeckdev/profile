@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'sinkin-sans';
+    src: url('SinkinSans-400Regular-webfont.woff')  format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'sinkin-sans';
+    src: url('SinkinSans-700Bold-webfont.woff')  format('woff');
+    font-style: bold;
+    font-weight: 700;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: sinkin-sans, sans-serif;
+    font-size: 16px;
+    background-color: rgb(254,254,254);
+    color: rgb(80,80,80);/* rgb(93,96,99);*/
+    line-height: 1.6em;/*39px;*/
+}
+p{
+    margin-bottom: 10px;
+}
+img {
+    max-width: 100%;
+    height: auto;    
+}
+#img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#img-caption, span, p, h1 {
+    display: flex;
+    justify-content: center;
+}
+span {
+    line-height: 1em;
+    font-size: .8em;
+    color: rgb(200,200,200);
+}
+a:link {
+    color: hsl(240,100%, 70%);
+}
+a:visited {
+    color: hsl(240,100%, 80%);
+}
+#main {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+h2 {
+    display: flex;
+    justify-content: center;  
+    margin: 30px; 
+}
+h1 {
+    margin: 60px 0 40px 0;
+    font-size: 4em;
+}
+#tribute-info {
+    margin-left: 30px;
+    max-width: 600px;   /* about this wide so that max characters is 80 */    
+}
+aside{
+    margin: 20px;
+    font-style: italic;
+}
+ul {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+li{
+     margin-top: 20px;
+}
+.more-info {
+    margin: 20px;
+}

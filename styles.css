@@ -149,6 +149,9 @@ canvas {
 .project-tile {
   background-color: var(--color-darkgrey);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -200,8 +203,28 @@ img {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.btn-secondary {
+  padding: 3px 50px;
+  margin: 2em;
+
+  background-color: var(--color-white);
+  font-size: 1.6em;
+  color: var(--color-darkgrey);
+  font-family: 'Catamaran', sans-serif;
+
+  border-radius: 3px;
+  border-style: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .btn:hover {
   animation-name: btn-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.btn-secondary:hover {
+  animation-name: btn-secondary-hover;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
 }
@@ -210,6 +233,78 @@ img {
   100% {
     background-color: var(--color-red);
   }
+}
+
+@keyframes btn-secondary-hover {
+  100% {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+  }
+}
+
+.tile-section-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  align-items: end;
+  border: 1px solid red;
+  height: 100%;
+}
+
+.tile-description {
+  margin: 0 10px;
+}
+
+.tile-button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile-button-container a {
+  margin: 10px;
+  max-width: 100px;
+  padding: 3px 20%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.project-tile h3,
+.project-tile h4 {
+  text-align: center;
+}
+
+.project-tile h3 {
+  padding-top: 1rem;
+  font-size: x-large;
+  background-color: var(--color-red);
+  width: 100%;
+}
+
+.project-tile h4 {
+  padding: 0;
+}
+
+.project-tile ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-tile li {
+  padding: 3px 25px;
+  margin: 0 10px 5px 10px;
+
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  font-family: 'Catamaran', sans-serif;
+
+  border-radius: 3px;
+  border-style: none;
+  box-shadow: 2px 2px 4px -2px rgba(0, 0, 0, 0.5);
+
+  list-style: none;
+  border-radius: 20px;
 }
 
 /* CONTACT SECTION */

@@ -35,6 +35,7 @@ body {
   width: 100%;
   background-color: var(--color-red);
   box-shadow: 2px 2px 2px #111;
+  z-index: 200;
 }
 
 #navbar ul {

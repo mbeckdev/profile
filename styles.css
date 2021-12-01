@@ -2,6 +2,7 @@
 /* ALL */
 /* NAVBAR */
 /* WELCOME SECTION */
+/* TECH STACK SECTION */
 /* PROJECTS SECTION */
 /* CONTACT SECTION */
 
@@ -14,7 +15,8 @@
 }
 
 :root {
-  --color-red: rgb(190, 50, 70);
+  --color-red: rgb(105, 43, 52);
+  --color-brightred: rgb(190, 50, 70);
   --color-white: rgb(255, 245, 245);
   --test-darkgrey: rgb(33, 37, 43);
   --color-darkgrey: rgb(48, 56, 65);
@@ -26,11 +28,22 @@
   src: url();
 }
 
+/* FONT SIZE BASED ON WIDTH */
+/* using rem only makes changes based on html (em uses the nearest parent) */
+html {
+  font-size: 60%;
+}
+
 body {
   background-color: var(--test-darkgrey);
   color: var(--color-white);
   font-size: 1.6em;
   font-family: 'Catamaran', sans-serif;
+}
+
+h2 {
+  font-size: 4rem;
+  padding: 70px 0;
 }
 
 /* NAVBAR */
@@ -66,7 +79,7 @@ a {
   font-size: 2.2rem;
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   #navbar ul {
     justify-content: center;
     margin-right: 0;
@@ -92,7 +105,7 @@ a {
 }
 
 #welcome-section-overlay p {
-  color: var(--color-red);
+  color: var(--color-brightred);
   font-family: 'Quicksand', sans-serif;
   font-size: 3rem; /* 1.6em */
   margin-top: -10px;
@@ -119,9 +132,52 @@ canvas {
   z-index: -1;
 }
 
-@media (max-width: 445px) {
+@media only screen and (max-width: 445px) {
   h1 {
     text-align: center;
+  }
+}
+
+/* TECH STACK SECTION */
+
+#tech-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: var(--color-red);
+  color: var(--color-white);
+
+  padding-bottom: 50px;
+}
+
+.fab {
+  font-size: 64px;
+}
+
+#tech-stack-icon-section {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  width: 100%;
+
+  padding: 30px 10%;
+}
+
+.tech-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: large;
+  margin: 0 1px;
+}
+
+@media only screen and (min-width: 550px) {
+  .tech-icon-container {
+    font-size: x-large;
   }
 }
 
@@ -129,27 +185,27 @@ canvas {
 
 #projects {
   background-color: var(--color-blue);
-  padding: 10rem 4rem;
+}
+
+@media only screen and (min-width: 400px) {
+  #projects {
+    padding: 0 2rem 3rem 2rem;
+  }
 }
 
 .projects-section-title {
-  font-size: 2em;
   text-align: center;
-  margin: 0 0 6rem 0;
-}
-
-.projects-section-title {
-  font-size: 4rem;
 }
 
 .projects-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3em;
+
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   justify-content: space-between;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3em;
 }
 
 .project-tile {
@@ -184,6 +240,7 @@ img {
   0% {
     color: white;
   }
+
   100% {
     color: var(--color-white);
     text-shadow: 0px 0px 5px var(--color-white);
@@ -322,10 +379,6 @@ img {
   height: 100vh;
 }
 
-.contact-section-header {
-  margin-top: 30px;
-}
-
 .contact-section-header p {
   text-align: center;
   color: #808080;
@@ -333,14 +386,7 @@ img {
   margin-top: -20px;
 }
 
-.contact-section-title {
-  font-weight: 700;
-  font-size: 6rem;
-  margin: 5% 0 0px 0;
-}
-
 .contact-links {
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   width: 225px;
@@ -356,17 +402,9 @@ img {
   animation-duration: 250ms;
 }
 
-@media (max-width: 550px) {
+@media only screen and (max-width: 550px) {
   .contact-section-title {
     text-align: center;
     line-height: 1em;
-    margin-bottom: 20px;
   }
-}
-
-/* FONT SIZE BASED ON WIDTH */
-/* using rem only makes changes based on html (em uses the nearest parent) */
-
-html {
-  font-size: 60%;
 }

@@ -223,7 +223,7 @@ function initialize() {
   decideHowManyDots();
 
   circleArray = [];
-  console.log('number of dots before for loop', numberOfDots);
+
   for (let i = 0; i < numberOfDots; i++) {
     let radius = Math.random() * 7 + 1;
     let x = Math.random() * (canvas.clientWidth - radius * 2) + radius;

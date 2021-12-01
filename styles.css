@@ -21,6 +21,11 @@
   --color-blue: #45567d;
 }
 
+@font-face {
+  font-family: face;
+  src: url();
+}
+
 body {
   background-color: var(--test-darkgrey);
   color: var(--color-white);
